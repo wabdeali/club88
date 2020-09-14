@@ -1,10 +1,11 @@
-import React, { useCallback, useContext } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import { withRouter, Redirect } from 'react-router-dom'
-import LoginDrawing from '../../imgs/loginDrawing.svg'
+import LoginDrawing from '../../imgs/Authentication/loginDrawing.svg'
 import { authentication } from '../../config/firebase'
 import { AuthContext } from '../Auth'
 
 const Login = ({ history, ...props }) => {
+    const [showError, setShowError] = useState(false)
 
     const handleLogin = useCallback(
         async event => {
@@ -15,7 +16,7 @@ const Login = ({ history, ...props }) => {
                     .signInWithEmailAndPassword(email.value, password.value);
                 history.push('/products')
             } catch (error) {
-                alert(error)
+                setShowError(true)
             }
         },
         [history],
@@ -48,6 +49,9 @@ const Login = ({ history, ...props }) => {
                         <label htmlFor="password">Password</label>
                         <input type="password" name="password" placeholder="Password"></input>
                     </div>
+                    {
+                        showError && <div className="errorMessage">Incorrect email or password</div>
+                    }
                     <div className="login-footer">
                         <button type="submit" className="btn">Login</button>
                     </div>

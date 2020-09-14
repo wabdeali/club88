@@ -1,23 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import heroImg from '../imgs/Homepage/4.png'
+import ceoImg from '../imgs/Homepage/ceo.jpg'
+import Navbar from './Reusable/Navbar'
+
+import { AuthContext } from './Auth'
 
 function Homepage() {
+
+    const { currentUser } = useContext(AuthContext);
+    console.log(currentUser)
     return (
         <div style={{ backgroundColor: 'rgb(199, 160, 61)', }}>
             <header>
-                <div className="navContainer">
-                    <h1>CLUB88</h1>
-                    <nav>
-                        <ul>
-                            <li><a href="_blank">AboutUs</a></li>
-                            <li><a href="/products">Shop</a></li>
-                            <li><a href="_blank">Profile</a></li>
-                        </ul>
-                    </nav>
-                </div>
+
+                {currentUser ? <Navbar logout={true} /> : <Navbar logout={false} />}
 
                 <div className="hero">
                     <div className="left">
-                        <img src={require('../imgs/4.png')} alt="" />
+                        <img src={heroImg} alt="" />
                     </div>
 
                     <div className="right">
@@ -34,7 +34,7 @@ function Homepage() {
             <section className="ceo">
                 <div className="container-ceo">
                     <div className="ceo-img">
-                        <img src={require('../imgs/ceo.jpg')} alt="" />
+                        <img src={ceoImg} alt="" />
                     </div>
 
                     <div className="ceo-right">

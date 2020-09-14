@@ -1,10 +1,11 @@
-import React, { useCallback, useContext } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import { withRouter, Redirect } from 'react-router-dom'
-import SignupDrawing from '../../imgs/signupDrawing.svg'
+import SignupDrawing from '../../imgs/Authentication/signupDrawing.svg'
 import { authentication } from '../../config/firebase';
 import { AuthContext } from '../Auth'
 
 const Signup = ({ history, ...props }) => {
+    const [showError, setShowError] = useState(false)
 
     const handleSignUp = useCallback(
         async event => {
@@ -13,9 +14,9 @@ const Signup = ({ history, ...props }) => {
             try {
                 await authentication
                     .createUserWithEmailAndPassword(email.value, password.value);
-                history.push('/products')
+                history.push('/products');
             } catch (error) {
-                alert(error)
+                setShowError(true);
             }
         },
         [history],
@@ -47,6 +48,9 @@ const Signup = ({ history, ...props }) => {
                         <label htmlFor="password">Password</label>
                         <input type="password" name="password" placeholder="Password"></input>
                     </div>
+                    {
+                        showError && <div className="errorMessage">Could not create account</div>
+                    }
                     <div className="login-footer">
                         <button type="submit" className="btn">Sign up</button>
                     </div>

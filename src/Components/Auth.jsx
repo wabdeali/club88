@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Loader from 'react-loader-spinner';
 import { authentication } from '../config/firebase'
 
 export const AuthContext = React.createContext();
@@ -16,7 +17,14 @@ const AuthProvider = ({ children }) => {
     }, [])
 
     if (pending) {
-        return <>Loading...</>
+        return <div className="spinner">
+            <Loader
+                type="TailSpin"
+                color="yellow"
+                height={100}
+                width={100}
+            />
+        </div>
     }
 
     return (
