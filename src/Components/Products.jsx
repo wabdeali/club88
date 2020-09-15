@@ -3,7 +3,6 @@ import ProductsHero from './Products/ProductsHero'
 import Navbar from './Reusable/Navbar'
 import { db } from '../config/firebase'
 
-import '@google/model-viewer'
 import './Products/product.css'
 import './Products/popup.css'
 import './Products/productcard.css'
