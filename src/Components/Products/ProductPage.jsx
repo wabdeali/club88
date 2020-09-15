@@ -10,6 +10,7 @@ const ProductPage = ({ product }) => {
                             camera-controls
                             background-color="yellow"
                             stage-light-intensity="3" environment-intensity="2"
+                            ar ar-modes="scene-viewer webxr" ar-scale="50%"
                             camera-orbit="0deg 90deg 100m"
                             alt="A 3D model of an astronaut">
                         </model-viewer>

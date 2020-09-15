@@ -7,9 +7,9 @@ const Navbar = ({ logout }) => {
             <h1>CLUB88</h1>
             <nav>
                 <ul>
+                    <li><a href="/">Home</a></li>
                     <li><a href="_blank">AboutUs</a></li>
                     <li><a href="/products">Shop</a></li>
-                    <li><a href="_blank">Profile</a></li>
                     {logout && <li onClick={() => authentication.signOut()}
                         style={{
                             display: 'inline-block',

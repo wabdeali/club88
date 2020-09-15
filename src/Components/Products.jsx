@@ -11,7 +11,6 @@ import './Products/style.css'
 import ProductThumbnail from './Products/ProductThumbnail'
 import ProductModal from './Products/ProductModal'
 
-
 function Products() {
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState([])
@@ -24,7 +23,6 @@ function Products() {
 
                 let tempData = snapshot.docs.map(doc => doc.data())
                 setData(tempData)
-                console.log(tempData)
                 setLoading(false)
 
             })
@@ -34,11 +32,13 @@ function Products() {
         <>
             <Navbar logout={true} />
             <ProductsHero />
-            <div className="products">
-                <div className="grid">
-                    {
-                        !loading && data.map(product => <ProductThumbnail product={product} setselectedproduct={setSelectedProduct} />)
-                    }
+            <div className="hero">
+                <div className="products">
+                    <div className="grid">
+                        {
+                            !loading && data.map(product => <ProductThumbnail product={product} setselectedproduct={setSelectedProduct} key={product.product_id} />)
+                        }
+                    </div>
                 </div>
             </div>
             {selectedProduct && <ProductModal product={selectedProduct} setselectedproduct={setSelectedProduct} />}
