@@ -4,7 +4,7 @@ import heroImg from '../../imgs/Products/sellers.png';
 const ProductsHero = () => {
     return (
         <div className="cover">
-            <img src={heroImg} alt="" style={{ width: '100%' }} />
+            <img src={heroImg} alt="" />
         </div>
     )
 }
