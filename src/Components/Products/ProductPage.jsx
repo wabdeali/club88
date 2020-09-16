@@ -47,7 +47,7 @@ const ProductPage = ({ product }) => {
                     </ul>
                     <div id="content">
                         <aside id="one" >
-                            {product.imgURLs.map(img => <img src={img} alt="" />)}
+                            {product.imgURLs.map(img => <img src={img} alt="" className="productImg" />)}
                         </aside>
                         <aside id="two">
                             {product.reviews.map(review => <div>

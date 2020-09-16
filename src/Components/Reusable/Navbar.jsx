@@ -8,7 +8,7 @@ const Navbar = ({ logout }) => {
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="_blank">AboutUs</a></li>
+                    <li><a href="/aboutus">About Us</a></li>
                     <li><a href="/products">Shop</a></li>
                     {logout && <li onClick={() => authentication.signOut()}
                         style={{
