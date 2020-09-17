@@ -2,8 +2,9 @@ import React from 'react'
 
 const Team = () => {
     return (
-        <section class="team">
-            <h1 class=""><span>Our</span> Team</h1>
+        <section className="team">
+            <img src={require('../../imgs/Homepage/team.jpg')} className="teamImg" alt="team" />
+            <h1 className=""><span>Our</span> Team</h1>
             <p>We are a team of creative, diverse, driven and innovative <br />
                 individuails. Our fabulous employees have been handpicked <br />
                     from the best of talented individuails who love a <br />

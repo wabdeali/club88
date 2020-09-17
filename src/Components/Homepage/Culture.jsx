@@ -3,6 +3,7 @@ import React from 'react'
 const Culture = () => {
     return (
         <section class="culture">
+            <img src={require('../../imgs/Homepage/culture.jpg')} className="cultureImg" alt="culture" />
             <h1 class="">Our Culture</h1>
             <p><span>CLUB88</span> follow the policy of free-culture<br />
                 as we believe in encouraging individuals to excel in <br />

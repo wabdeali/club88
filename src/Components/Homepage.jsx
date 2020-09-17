@@ -15,7 +15,7 @@ function Homepage() {
 
     return (
         <>
-            <div style={{ backgroundColor: 'rgb(199, 160, 61)', }}>
+            <div>
                 <header>
 
                     {currentUser ? <Navbar logout={true} /> : <Navbar logout={false} />}

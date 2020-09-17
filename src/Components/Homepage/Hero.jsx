@@ -3,8 +3,7 @@ import heroImg from '../../imgs/Homepage/4.png'
 
 const Hero = () => {
     return (
-
-        <div className="hero">
+        <div className="hero-container">
             <div className="left">
                 <img src={heroImg} alt="" />
             </div>

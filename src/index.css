@@ -13,15 +13,16 @@
 header {
     width: 100%;
     background-color: black;
-    padding-bottom: 150px;
     height: auto;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 85%, 0 100%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 85%, 0 100%); */
+    background: rgb(199, 160, 61);
 }
 
 .navContainer {
     display: block;
     position: relative;
     height: 100px;
+    background-color: black;
 }
 
 .navContainer h1 {
@@ -64,13 +65,15 @@ header {
 
 /*----------------------------Nav css ends here --------------------------------*/
 
-.hero {
-    /* padding: 3rem 0; */
+.hero-container {
+    padding: 3rem 0 8rem;
     margin: 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 85%, 0 100%);
 }
 
 .left {
@@ -109,6 +112,10 @@ header {
 
 section {
     padding: 3rem 0;
+}
+
+.ceo {
+    background-color: rgb(199, 160, 61);
 }
 
 .container-ceo {
@@ -245,8 +252,18 @@ section.service .card-wrapper .card:hover h2, section.service .card-wrapper .car
 section.team {
     padding: 5rem 3rem;
     text-align: left;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./imgs/Homepage/team.jpg);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
+    position: relative;
+}
+
+.teamImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
 }
 
 .team h1 {
@@ -257,6 +274,7 @@ section.team {
     border-bottom: 3px solid black;
     line-height: 3rem;
     width: 30%;
+    z-index: 10;
 }
 
 .team p {
@@ -264,6 +282,7 @@ section.team {
     padding-top: 1.5rem;
     font-size: 1rem;
     color: black;
+    z-index: 10;
 }
 
 /**************************our culture***************************/
@@ -271,8 +290,18 @@ section.team {
 section.culture {
     padding-top: 5rem;
     text-align: left;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./imgs/Homepage/culture.jpg);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
+    position: relative;
+}
+
+.cultureImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(0.3);
 }
 
 .culture h1 {
@@ -465,7 +494,7 @@ footer {
 }
 
 @media only screen and (max-width: 470px) {
-    .hero .right {
+    .hero-container .right {
         padding-bottom: 0;
     }
     .ceo {
