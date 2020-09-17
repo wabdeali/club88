@@ -7,6 +7,7 @@ const ProductPage = ({ product }) => {
                 <div class="product_image">
                     <div class="main_image">
                         <model-viewer class='a' src={product.modelURL}
+                            autoplay
                             camera-controls
                             background-color="yellow"
                             stage-light-intensity="3" environment-intensity="2"

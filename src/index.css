@@ -330,7 +330,7 @@ section.culture {
 footer {
     width: 100%;
     padding: 5rem 0 3rem;
-    background-color: #121212;
+    background-color: #070707;
     color: white;
     text-align: justify;
     display: block;
@@ -453,6 +453,17 @@ footer {
     text-align: center;
     color: white;
     font-size: 15px;
+}
+
+.errorMessage {
+    display: block;
+    margin: 0 auto 10px;
+    border: 3px solid rgb(199, 46, 46);
+    background-color: rgba(219, 100, 100, 0.39);
+    color: red;
+    padding: 5px 35px;
+    border-radius: 3px;
+    font-size: 1.1em;
 }
 
 /* MEDIA QUERIES */
