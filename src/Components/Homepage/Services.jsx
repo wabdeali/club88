@@ -10,7 +10,9 @@ const Services = () => {
                     <div className="card">
                         <img src={require("../../imgs/Homepage/3D.png")} alt="" />
                         <h2>3Dimensional Product View</h2>
-                        <p>.</p>
+                        <p>View our products in 3D to get the best idea of how it will look in real life. We also
+                        Have an AR feature to see products in your own home.
+                        </p>
                     </div>
 
                     <div className="card">
@@ -31,13 +33,13 @@ const Services = () => {
                     <div className="card">
                         <img src={require("../../imgs/Homepage/delivery.png")} alt="" />
                         <h2>Express Delivery</h2>
-                        <p> </p>
+                        <p>Fast delivery taken care by our own delivery team. One day delivery available for selected items.</p>
                     </div>
 
                     <div className="card">
                         <img src={require("../../imgs/Homepage/good-quality.png")} alt="" />
                         <h2>100% Original </h2>
-                        <p></p>
+                        <p>Guarenteed original products with official documents delivered with products.</p>
                     </div>
 
                     <div className="card">
