@@ -17,10 +17,9 @@ function Products() {
     const [selectedProduct, setSelectedProduct] = useState(null)
 
     useEffect(() => {
-
+        console.log('reached')
         db.collection('products').get()
             .then(snapshot => {
-
                 let tempData = snapshot.docs.map(doc => doc.data())
                 setData(tempData)
                 setLoading(false)
