@@ -14,6 +14,7 @@ const Login = ({ history, ...props }) => {
             try {
                 await authentication
                     .signInWithEmailAndPassword(email.value, password.value);
+                console.log('login successful');
                 history.push('/products')
             } catch (error) {
                 setShowError(true)
